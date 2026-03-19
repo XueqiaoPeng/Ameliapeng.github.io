@@ -2271,3 +2271,71 @@ button,
     border-top: 0;
     margin-top: 0;
     padding-top: 0; }
+/* ===== Home banner profile photo fix ===== */
+#banner {
+  align-items: center;
+}
+
+#banner .content {
+  width: 60%;
+}
+
+#banner .profile-photo {
+  width: 40%;
+  margin: 0 0 2em 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#banner .profile-photo img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  display: block;
+}
+
+/* make overall page feel slightly less oversized */
+body, input, select, textarea {
+  font-size: 12pt;
+}
+
+#main > .inner {
+  max-width: 90em;
+}
+
+/* tablet */
+@media screen and (max-width: 980px) {
+  #banner .content {
+    width: 100%;
+  }
+
+  #banner .profile-photo {
+    width: 100%;
+    margin: 0 0 2em 0;
+  }
+
+  #banner .profile-photo img {
+    max-width: 260px;
+    max-height: none;
+  }
+}
+
+/* phone */
+@media screen and (max-width: 736px) {
+  body, input, select, textarea {
+    font-size: 10pt;
+  }
+
+  #main > .inner {
+    padding: 0 1.5em 0.1em 1.5em;
+  }
+
+  #banner .profile-photo img {
+    max-width: 220px;
+  }
+}
